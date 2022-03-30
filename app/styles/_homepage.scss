@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(238, 241, 241);
+}
+
+.cart{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    padding: 5px;
+    background-color: aliceblue;
+    border-radius: 40%;
+    box-shadow: 2px 2px 2px rgb(139, 139, 139), -2px 2px 2px rgb(139, 139, 139),2px -2px 2px rgb(139, 139, 139), -2px -2px 2px rgb(156, 156, 156);
+}
+
+.cart:hover{
+    box-shadow: 1px 1px 1px rgb(139, 139, 139), -1px 1px 1px rgb(139, 139, 139),1px -1px 1px rgb(139, 139, 139), -1px -1px 1px rgb(156, 156, 156);
+}
