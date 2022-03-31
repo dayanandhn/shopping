@@ -1,37 +1,28 @@
 {{page-title 'Items'}}
-<main class='container'>
-  <h4>Inside cart Items</h4>
-  <main class='container mt-4'>
-      <div class="row">
-          <LinkTo class="col" @route='item' @model='1'>Product 1</LinkTo>
-          <span class="col">{{this.model}}</span>
+<h4 class='container'>Inside cart Items</h4>
+<main class='container wraps'>
+  <div class='container row'>
+    {{#each @model as |item|}}
+      <div class='row mb-1 mt-1'>
+        <LinkTo
+          class='col'
+          @route='cart.items.preview'
+          @model={{item.id}}
+        >{{item.name}}</LinkTo>
+        <span class='col'>{{item.price}}</span>
       </div>
-      <div class="row">
-          <LinkTo class="col" @route='item' @model='2'>Product 2</LinkTo>
-          <span class="col">{{this.model}}</span>
-      </div>
-    
-    
-  </main>
-  <section class='container mt-4'>
-    <div class='row'>
-      <span class='col'>Subtotal</span>
-      <span class='col'>{{this.subtotal}}</span>
-    </div>
+    {{/each}}
+  </div>
 
-    <div class='row'>
-      <span class='col'>Tax</span>
-      <span class='col'>{{this.tax}}</span>
-    </div>
-    <hr>
-
-    <div class='row'>
-      <span class='col'>Total</span>
-      <span class='col'>{{this.total}}</span>
-    </div>
-    <hr>
-  </section>
-
-  <button type='button' class='btn btn-success float-right'>Check Out</button>
+  <div class=''>
+    {{outlet}}
+  </div>
 </main>
-{{outlet}}
+
+<div class='container pb-2 pt-2 pl-2 pr-2'>
+  <BillTotal
+    @subtotal = {{subtotal this.itemPrice}}
+    @tax = {{this.tax}}
+    @total = {{this.total}}
+  />
+</div>

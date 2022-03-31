@@ -17,3 +17,8 @@ body{
 .cart:hover{
     box-shadow: 1px 1px 1px rgb(139, 139, 139), -1px 1px 1px rgb(139, 139, 139),1px -1px 1px rgb(139, 139, 139), -1px -1px 1px rgb(156, 156, 156);
 }
+
+.wraps{
+    display: flex;
+    border: 2px solid black;
+}

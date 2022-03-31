@@ -10,6 +10,8 @@ Router.map(function () {
   this.route('item', { path: '/item/:item_id' });
   this.route('not-found', { path: '/*path' });
   this.route('cart', { path: 'shopping-cart' }, function () {
-    this.route('items');
+    this.route('items', function () {
+      this.route('preview', { path: '/preview/:item_id' });
+    });
   });
 });

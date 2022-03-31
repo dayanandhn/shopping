@@ -1,7 +1,12 @@
-{{page-title "Item"}}
-<div class="container">
-    <h1>item module</h1>
-{{this.model}} item called
+{{page-title 'Item'}}
+<div class='container'>
+  <h1>item module</h1>
+  <div class='container'>
+    <span>Item ID: {{this.model.id}}</span>
+    <br /><span>Item Name: {{this.model.name}}</span>
+    <br />
+    <span>Item price: {{this.model.price}}</span>
+  </div>
 </div>
 
 {{outlet}}

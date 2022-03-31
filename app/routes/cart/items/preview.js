@@ -1,6 +1,6 @@
 import Route from '@ember/routing/route';
 
-export default class ItemRoute extends Route {
+export default class CartItemsPreviewRoute extends Route {
   model(params) {
     const items = {
       1: { id: 1, name: 'pencil', price: 5.5 },
