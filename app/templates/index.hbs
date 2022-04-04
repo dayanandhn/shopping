@@ -1,22 +1,30 @@
-{{page-title "Index"}}
-<div class="container">
-    <h1>Home</h1>
+{{page-title 'Index'}}
+<div class='container'>
+  <h1>Home</h1>
 </div>
-{{!-- <main class="container">
-    <LinkTo class="row" @route="item" @model="1">Product 1</LinkTo>
-    <LinkTo class="row" @route="item" @model="2">Product 2</LinkTo>
-</main> --}}
-<div class="container">
-    {{#each @model as |item|}}
-      <div class='row mb-1 mt-1'>
-        <LinkTo
-          class='col'
-          @route='item'
-          @model={{item.id}}
-        >{{item.name}}</LinkTo>
-        {{!-- <span class='col'>{{item.price}}</span> --}}
-      </div>
-    {{/each}}
-  </div>
+
+{{!-- <div class='container'>
+  {{#each @model as |item|}}
+    <div class='row mb-1 mt-1'>
+      <LinkTo
+        class='col'
+        @route='item'
+        @model={{item.id}}
+      >{{item.name}}</LinkTo>
+      <span class='col'>{{item.price}}</span>
+    </div>
+  {{/each}}
+</div> --}}
+<div class='container'>
+  <ItemsList @routeName='item' />
+</div>
+
+<div class='container mt-5'>
+  {{!-- <label for='adding-item'>Add item to the list</label>
+  <Input id='item-name' @type='text' /> --}}
+
+  <InputItem/>
+
+</div>
 
 {{outlet}}

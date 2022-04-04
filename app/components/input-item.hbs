@@ -1,0 +1,17 @@
+<label class="container">
+    Add Items
+    <label for="Item-Name" class="row mt-2">
+        <span class="col">Item Name:</span>
+        <Input class="col" id="itemname" @value={{this.itemName}} {{autofocus}}/>
+    </label>
+    <label for="Item-Price" class="row mt-2">
+        <span class="col">Item Price:</span>
+        <Input class="col" id="itemPrice" @value={{this.itemPrice}}/>
+    </label>
+    
+    <button type="button" class="btn btn-outline-primary mt-2"
+        {{on "click" this.submit}}
+    >
+        submit
+    </button>
+</label>

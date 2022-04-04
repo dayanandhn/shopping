@@ -1,0 +1,14 @@
+<div class='container row'>
+    {{#each this.itemList.items as |item|}}
+      <div class='row mb-1 mt-1'>
+        <LinkTo
+          class='col'
+          @route={{@routeName}}
+          @model={{item.id}}
+        >{{item.name}}</LinkTo>
+        {{#if @price}}
+        <span class='col'>{{item.price}}</span>
+        {{/if}}
+      </div>
+    {{/each}}
+  </div>

@@ -1,23 +1,23 @@
-{{yield}}
-
 <section class='row mb-1 mt-1'>
-    <hr />
-    <div class='row mb-1 mt-1'>
-      <span class='col'>Subtotal</span>
-       <span class='col'>{{@subtotal}}</span>
-    </div>
+  <hr />
+  <div class='row mb-1 mt-1'>
+    <span class='col'>Subtotal</span>
+      <span class='col'>{{@subtotal}}</span>
+  </div>
 
-    <div class='row mb-1 mt-1'>
-      <span class='col'>Tax</span>
-      <span class='col'>{{@tax}}</span>
-    </div>
-    <hr />
-    <div class='row mb-1 mt-1'>
-      <span class='col'>Total</span>
-      <span class='col'>{{@total}}</span>
-    </div>
+  <div class='row mb-1 mt-1'>
+    <span class='col'>Tax</span>
+    <span class='col'>{{@tax}}</span>
+  </div>
+  <hr />
+  <div class='row mb-1 mt-1'>
+    <span class='col'>Total</span>
+    <span class='col'>{{@total}}</span>
+  </div>
 
-    <div class='row'>
-      <button type='button' class='btn btn-success'>Check Out</button>
-    </div>
-  </section>
+  <div class='row'>
+    <button id="checkout-btn" type='button' class='btn btn-success'
+      {{!-- {{on "click" this.checkout}} --}}
+    >Check Out</button>
+  </div>
+</section>
