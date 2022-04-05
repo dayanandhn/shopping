@@ -3,27 +3,16 @@
   <h1>Home</h1>
 </div>
 
-{{!-- <div class='container'>
-  {{#each @model as |item|}}
-    <div class='row mb-1 mt-1'>
-      <LinkTo
-        class='col'
-        @route='item'
-        @model={{item.id}}
-      >{{item.name}}</LinkTo>
-      <span class='col'>{{item.price}}</span>
-    </div>
-  {{/each}}
-</div> --}}
 <div class='container'>
   <ItemsList @routeName='item' />
+  <LinkTo @route="index.add-new">
+    <button type="button" class="btn btn-primary">Add New Item</button>
+  </LinkTo>
 </div>
 
 <div class='container mt-5'>
-  {{!-- <label for='adding-item'>Add item to the list</label>
-  <Input id='item-name' @type='text' /> --}}
 
-  <InputItem/>
+  {{!-- <InputItem/> --}}
 
 </div>
 

@@ -1,6 +1,12 @@
 import Route from '@ember/routing/route';
+import { service } from '@ember/service';
 
 export default class CartItemsPreviewRoute extends Route {
+  
+  @service admin;
+  beforeModel() {
+    if (!this.admin.get()) this.transitionTo('cart.items');
+  }
   model(params) {
     const items = {
       1: { id: 1, name: 'pencil', price: 5.5 },

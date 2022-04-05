@@ -14,4 +14,7 @@ Router.map(function () {
       this.route('preview', { path: '/preview/:item_id' });
     });
   });
+  this.route('index', function () {
+    this.route('add-new');
+  });
 });
