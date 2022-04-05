@@ -6,6 +6,6 @@ export default helper(function subtotal(params) {
   for (let i = 0; i < objs.length; i++) {
     subtotal += objs[i].price;
   }
-  console.log(subtotal);
+  // console.log(subtotal);
   return subtotal;
 });

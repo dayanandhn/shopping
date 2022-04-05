@@ -6,7 +6,7 @@ export default class AdminSwitchComponent extends Component {
 
   @action
   change() {
-    console.log('action click');
+    // console.log('action click');
     this.admin.update();
   }
 }
