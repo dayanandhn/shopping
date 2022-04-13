@@ -17,4 +17,5 @@ Router.map(function () {
   this.route('index', function () {
     this.route('add-new');
   });
+  this.route('promiseReject');
 });

@@ -1,0 +1,34 @@
+{
+  "itemModel": [
+    {
+      "itemName": "box",
+      "itemId": 1,
+      "id":1,
+      "itemPrice": 55
+    },
+    {
+      "itemName": "paper",
+      "itemId": 2,
+      "id":2,
+      "itemPrice": 5
+    },
+    {
+      "itemName": "scale",
+      "itemId": 3,
+      "id":3,
+      "itemPrice": 10
+    },
+    {
+      "itemName": "eraser",
+      "itemId": 4,
+      "id":4,
+      "itemPrice": 3
+    },
+    {
+      "itemName": "pen",
+      "itemId": 5,
+      "id":5,
+      "itemPrice": 6
+    }
+  ]
+}
