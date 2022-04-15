@@ -1,5 +1,4 @@
 import Route from '@ember/routing/route';
-import { helper } from '@ember/component/helper';
 import { service } from '@ember/service';
 
 export default class CartItemsRoute extends Route {

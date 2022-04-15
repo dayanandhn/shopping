@@ -7,11 +7,6 @@ export default class CartItemsController extends Controller {
     }, 0);
   }
 
-  get itemPrice() {
-    console.log(this.model);
-    return this.model;
-  }
-
   get tax() {
     return (this.subtotal * 0.05).toFixed(2);
   }
