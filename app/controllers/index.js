@@ -78,4 +78,43 @@ export default class IndexController extends Controller {
     this.model = itemarray;
   }
 
+
+
+  // 
+  // 
+  // 
+
+  @tracked eitemName = '';
+  @tracked eitemPrice = '';
+  @tracked eitemId = '';
+  // @service store;
+
+  @action
+  submit() {
+  
+    let data = this.store.peekRecord('item-model', this.eitemId);
+    if (!(this.eitemName == '')) {
+      data.itemName = this.eitemName;
+    }
+    if (!(this.eitemPrice == '')) {
+      data.itemPrice = this.eitemPrice;
+    }
+    console.log(data.itemName);
+
+    let itemslist = this.store.peekAll('item-model');
+    let itemarray = [];
+
+    for (let i = 0; i < itemslist.length; i++) {
+      let data = itemslist.objectAt(i);
+      let itemData = {};
+      itemData['itemName'] = data.itemName;
+      itemData['itemId'] = data.itemId;
+      itemData['itemPrice'] = data.itemPrice;
+
+      itemarray.push(itemData);
+    }
+    this.model = itemarray;
+    
+  }
+
 }
