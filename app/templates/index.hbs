@@ -34,8 +34,8 @@
   {{!-- <ItemModelList @itemarray={{this.model}}/> --}}
   {{#each this.model as |item|}}
     <div class='mt-2'>
-      <span>{{item.itemName}} {{item.itemId}}</span>
-      <button
+      <span data-test-itemfill>{{item.itemName}} {{item.itemId}}</span>
+      <button data-test-delete
         type='button'
         {{on 'click' (fn this.delete item.itemId)}}
       >delete</button>
@@ -52,18 +52,18 @@
     Add Items
     <label for="Item-Name" class="row mt-2">
         <span class="col">Item Name:</span>
-        <Input class="col" id="itemname" @value={{this.itemName}} {{autofocus}}/>
+        <Input data-test-itemname class="col" id="itemname" @value={{this.itemName}} {{autofocus}}/>
     </label>
     <label for="Item-Price" class="row mt-2">
         <span class="col">Item Price:</span>
-        <Input class="col" id="itemPrice" @value={{this.itemPrice}}/>
+        <Input data-test-itemprice class="col" id="itemPrice" @value={{this.itemPrice}}/>
     </label>
     <label for="Item-Price" class="row mt-2">
         <span class="col">Item id:</span>
-        <Input class="col" id="itemId" @value={{this.itemId}}/>
+        <Input data-test-itemid class="col" id="itemId" @value={{this.itemId}}/>
     </label>
     
-    <button type="button" class="btn btn-outline-primary mt-2"
+    <button data-test-submit type="button" class="btn btn-outline-primary mt-2"
         {{on "click" this.addItem}}
     >
         submit

@@ -3,7 +3,6 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { service } from '@ember/service';
 export default class IndexController extends Controller {
-
   @service store;
 
   @action
@@ -14,7 +13,6 @@ export default class IndexController extends Controller {
 
   @action
   delete(itemid) {
-    
     // console.log(itemid);
     alert(`click ${itemid}`);
     let items = this.store.peekRecord('item-model', itemid);
@@ -78,11 +76,9 @@ export default class IndexController extends Controller {
     this.model = itemarray;
   }
 
-
-
-  // 
-  // 
-  // 
+  //
+  //
+  //
 
   @tracked eitemName = '';
   @tracked eitemPrice = '';
@@ -91,7 +87,6 @@ export default class IndexController extends Controller {
 
   @action
   submit() {
-  
     let data = this.store.peekRecord('item-model', this.eitemId);
     if (!(this.eitemName == '')) {
       data.itemName = this.eitemName;
@@ -114,7 +109,5 @@ export default class IndexController extends Controller {
       itemarray.push(itemData);
     }
     this.model = itemarray;
-    
   }
-
 }
