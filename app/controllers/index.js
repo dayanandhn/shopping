@@ -14,7 +14,7 @@ export default class IndexController extends Controller {
   @action
   delete(itemid) {
     // console.log(itemid);
-    alert(`click ${itemid}`);
+    // alert(`click ${itemid}`);
     let items = this.store.peekRecord('item-model', itemid);
 
     items.deleteRecord();

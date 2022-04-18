@@ -15,9 +15,11 @@ module('Acceptance | shopping', function (hooks) {
     await click('[data-test-submit]');
     assert
       .dom('[data-test-itemfill]')
-      .hasText('item10');
+      .hasAnyText('item10');
     // await this.pauseTest();
-
     await click('[data-test-delete]');
   });
+
+  
+
 });
