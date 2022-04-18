@@ -28,5 +28,6 @@ export default class EditItemComponent extends Component {
     }
     console.log(data.itemName);
     // console.log(this.store.peekAll('item-model'));
+    
   }
 }
